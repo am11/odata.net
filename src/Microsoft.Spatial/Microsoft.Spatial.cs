@@ -115,11 +115,7 @@ namespace Microsoft.Spatial {
         ResourceManager resources;
 
         internal TextRes() {
-#if !DNXCORE50
-            resources = new System.Resources.ResourceManager("Microsoft.Spatial", this.GetType().Assembly);
-#else
-            resources = new System.Resources.ResourceManager("Microsoft.Spatial", this.GetType().GetTypeInfo().Assembly);
-#endif
+            resources = new ResourceManager("Microsoft.Spatial", this.GetType().GetAssembly());
         }
         
         private static TextRes GetLoader() {

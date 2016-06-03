@@ -8,6 +8,7 @@ obj/
 *.user
 *.vstemplate
 !src/CodeGen/ODataT4CodeGenerator.vstemplate
+*.lock.json
 
 # TFS files
 *.vspscc

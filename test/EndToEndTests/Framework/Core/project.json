@@ -1,11 +1,10 @@
 {
-  "name": "Microsoft.Test.OData.Framework",
+  "version": "6.15.0-*",
 
   "buildOptions": {
     "define": [
       "PORTABLELIB"
-    ],
-    "outputName": "Microsoft.Test.OData.Framework"
+    ]
   },
 
   "dependencies": {

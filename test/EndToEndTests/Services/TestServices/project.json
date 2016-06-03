@@ -1,4 +1,6 @@
 {
+  "version": "6.15.0-*",
+
   "buildOptions": {
     "define": [
       "PORTABLELIB"
@@ -20,10 +22,7 @@
   },
 
   "dependencies": {
-    "Microsoft.OData.Core": {
-      "target": "project"
-    },
-    "Microsoft.Test.OData.Framework": {
+    "Core": {
       "target": "project"
     }
   },

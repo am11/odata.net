@@ -9,6 +9,7 @@ namespace Microsoft.OData.Client.Materialization
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
+    using System.Reflection;
     using Microsoft.OData.Client;
     using Microsoft.OData.Client.Metadata;
     using Microsoft.OData.Core;

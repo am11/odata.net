@@ -36,7 +36,7 @@ namespace Microsoft.OData.Client
         /// </returns>
         public static IEnumerable<object> GetCustomAttributes(Type type, Type attributeType, bool inherit)
         {
-#if DNXCORE50
+#if NETSTANDARD1_3
             return type.GetTypeInfo().GetCustomAttributes(attributeType, inherit);
 #else
             return type.GetCustomAttributes(attributeType, inherit);

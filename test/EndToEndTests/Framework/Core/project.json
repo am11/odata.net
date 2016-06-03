@@ -1,0 +1,19 @@
+{
+  "version": "6.15.0-*",
+
+  "buildOptions": {
+    "define": [
+      "PORTABLELIB"
+    ]
+  },
+
+  "dependencies": {
+    "Microsoft.OData.Client": {
+      "target": "project"
+    }
+  },
+
+  "frameworks": {
+    "netstandard1.3": { }
+  }
+}

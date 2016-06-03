@@ -4,7 +4,7 @@
 // </copyright>
 //---------------------------------------------------------------------
 
-#if !DNXCORE50
+#if !NETSTANDARD1_3
 #if ASTORIA_CLIENT
 namespace Microsoft.OData.Client
 #else

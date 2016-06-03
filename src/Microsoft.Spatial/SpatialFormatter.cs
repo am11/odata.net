@@ -8,6 +8,7 @@ namespace Microsoft.Spatial
 {
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
+    using System.Reflection;
 
     /// <summary>Represents the base class for all Spatial Formats.</summary>
         /// <typeparam name="TReaderStream">The type of reader to be read from.</typeparam>

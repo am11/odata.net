@@ -13,6 +13,7 @@ namespace Microsoft.OData.Core.UriParser
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.IO;
+    using System.Reflection;
     using System.Text;
     using Microsoft.OData.Core.Evaluation;
     using Microsoft.OData.Core.JsonLight;

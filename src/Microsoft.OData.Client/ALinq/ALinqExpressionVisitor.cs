@@ -14,6 +14,7 @@ namespace Microsoft.OData.Client
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq.Expressions;
+    using System.Reflection;
 
     /// <summary>
     /// base vistor class for walking an expression tree bottom up.

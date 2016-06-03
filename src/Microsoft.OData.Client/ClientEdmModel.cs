@@ -490,7 +490,7 @@ namespace Microsoft.OData.Client
                     {
                         Action<EdmEnumTypeWithDelayLoadedMembers> delayLoadEnumMembers = (enumType) =>
                         {
-#if DNXCORE50
+#if NETSTANDARD1_3
                             foreach (FieldInfo tmp in enumTypeTmp.GetFields().Where(fieldInfo => fieldInfo.IsStatic))
 #else
                             foreach (FieldInfo tmp in enumTypeTmp.GetFields(BindingFlags.Static | BindingFlags.Public))

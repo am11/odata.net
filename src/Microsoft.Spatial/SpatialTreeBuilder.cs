@@ -11,6 +11,7 @@ namespace Microsoft.Data.Spatial
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
+    using System.Reflection;
     using Microsoft.Spatial;
     using Spatial;
 

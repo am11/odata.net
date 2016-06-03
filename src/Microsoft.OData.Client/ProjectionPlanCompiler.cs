@@ -689,7 +689,7 @@ namespace Microsoft.OData.Client
                             entryParameterAtMemberInit,
                             expressions.Skip(1));
                     }
-#if DNXCORE50
+#if NETSTANDARD1_3
                     Type memberParentType = assignment.Member.DeclaringType;
 #else
                     Type memberParentType = assignment.Member.ReflectedType;

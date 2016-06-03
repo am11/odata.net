@@ -15,6 +15,7 @@ namespace Microsoft.OData.Core.Metadata
     using System.Globalization;
     using System.IO;
     using System.Linq;
+    using System.Reflection;
     using Microsoft.Spatial;
     using Microsoft.OData.Edm;
     using Microsoft.OData.Edm.Library;

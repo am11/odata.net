@@ -91,11 +91,11 @@ namespace Microsoft.OData.Client
             get
             {
                 Debug.Assert(this.Context.ResolveName != null, "this.context.ResolveName != null.");
-#if DNXCORE50
-    // Func<>.Method property does not exist on Win8 and there is no other way to access any MethodInfo that is behind the Func,
-    // so we have no way to determine if the Func was supplied by the user or if it's the one provided by codegen.
-    // In this case we will always assume it's the one provided by codegen, which means we'll try to resolve the name using the entity descriptor
-    // first. This is likely to be correct in more cases than using the codegen resolver, so it is safer to make this assumption than the reverse.
+#if NETSTANDARD1_3
+                // Func<>.Method property does not exist on Win8 and there is no other way to access any MethodInfo that is behind the Func,
+                // so we have no way to determine if the Func was supplied by the user or if it's the one provided by codegen.
+                // In this case we will always assume it's the one provided by codegen, which means we'll try to resolve the name using the entity descriptor
+                // first. This is likely to be correct in more cases than using the codegen resolver, so it is safer to make this assumption than the reverse.
                 return false;
 #else
                 MethodInfo resolveNameMethodInfo = this.Context.ResolveName.Method;

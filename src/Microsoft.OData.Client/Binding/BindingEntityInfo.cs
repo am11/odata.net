@@ -14,6 +14,7 @@ namespace Microsoft.OData.Client
     using System.Diagnostics;
     using System.Linq;
     using System.Threading;
+    using System.Reflection;
     using Microsoft.OData.Client.Metadata;
     #endregion
 

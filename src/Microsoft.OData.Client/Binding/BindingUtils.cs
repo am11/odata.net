@@ -10,6 +10,7 @@ namespace Microsoft.OData.Client
 
     using System;
     using System.Diagnostics;
+    using System.Reflection;
 #endregion
 
     /// <summary>Utilities for binding related operations</summary>

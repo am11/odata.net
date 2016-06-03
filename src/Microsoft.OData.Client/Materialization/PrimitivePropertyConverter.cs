@@ -11,6 +11,7 @@ namespace Microsoft.OData.Client.Materialization
     using System.Globalization;
     using System.IO;
     using System.Xml;
+    using System.Reflection;
     using Microsoft.OData.Core;
     using Microsoft.Spatial;
     using PlatformHelper = Microsoft.OData.Client.PlatformHelper;

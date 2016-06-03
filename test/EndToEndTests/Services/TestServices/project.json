@@ -1,0 +1,36 @@
+{
+  "supports": { },
+
+  "buildOptions": {
+    "define": [
+      "PORTABLELIB"
+    ],
+    "compile": {
+      "include": [
+        "../CSDSCReferences/Microsoft.Test.OData.Services.TestServices.AstoriaDefaultServiceReference.cs",
+        "../CSDSCReferences/Microsoft.Test.OData.Services.TestServices.ActionOverloadingServiceReference.cs",
+        "../CSDSCReferences/Microsoft.Test.OData.Services.TestServices.KeyAsSegmentServiceReference.cs",
+        "../CSDSCReferences/Microsoft.Test.OData.Services.TestServices.ODataWriterDefaultServiceReference.cs",
+        "../CSDSCReferences/Microsoft.Test.OData.Services.TestServices.PrimitiveKeysServiceReference.cs"
+      ],
+      "exclude": [
+        "./PublicProvider/**/*.cs",
+        "./T4Clients/**/*.cs"
+
+      ]
+    }
+  },
+
+  "dependencies": {
+    "Microsoft.OData.Core": {
+      "target": "project"
+    },
+    "Microsoft.Test.OData.Framework": {
+      "target": "project"
+    }
+  },
+
+  "frameworks": {
+    "netstandard1.3": { }
+  }
+}

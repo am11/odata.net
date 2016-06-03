@@ -14,6 +14,7 @@ namespace Microsoft.OData.Client
     using Microsoft.OData.Client.Materialization;
     using Microsoft.OData.Client.Metadata;
     using System.Diagnostics;
+    using System.Reflection;
     using System.Xml;
     using Microsoft.OData.Core;
 

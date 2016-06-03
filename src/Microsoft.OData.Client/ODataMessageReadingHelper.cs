@@ -37,7 +37,7 @@ namespace Microsoft.OData.Client
         internal ODataMessageReaderSettings CreateSettings()
         {
             ODataMessageReaderSettings settings = new ODataMessageReaderSettings();
-#if !DNXCORE50
+#if !NETSTANDARD1_3
             if (this.responseInfo.Context.EnableAtom)
             {
                 // Enable ATOM in client

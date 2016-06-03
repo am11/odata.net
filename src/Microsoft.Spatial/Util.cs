@@ -7,6 +7,7 @@
 namespace Microsoft.Spatial
 {
     using System;
+    using System.Reflection;
 
     /// <summary>
     /// Util class

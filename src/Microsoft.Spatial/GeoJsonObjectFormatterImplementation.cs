@@ -7,6 +7,7 @@
 namespace Microsoft.Data.Spatial
 {
     using System.Collections.Generic;
+    using System.Reflection;
     using Microsoft.Spatial;
 
     /// <summary>

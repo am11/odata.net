@@ -551,7 +551,7 @@ namespace Microsoft.OData.Edm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Code is shared among multiple assemblies and this method should be available as a helper in case it is needed in new code.")]
         internal static IEnumerable<PropertyInfo> GetPublicProperties(this Type type, bool instanceOnly, bool declaredOnly)
         {
-            // DNXCORE50: The BindingFlags enum and all related reflection method overloads have been removed from DNXCORE50. Instead of trying to provide
+            // NETSTANDARD1_3: The BindingFlags enum and all related reflection method overloads have been removed from NETSTANDARD. Instead of trying to provide
             // a general purpose flags enum and methods that can take any combination of the flags, we provide more restrictive methods that
             // still allow for the same functionality as needed by the calling code.
 #if NETSTANDARD1_3
@@ -583,7 +583,7 @@ namespace Microsoft.OData.Edm
         /// <returns>Enumerable of non public properties for the type.</returns>
         internal static IEnumerable<PropertyInfo> GetNonPublicProperties(this Type type, bool instanceOnly, bool declaredOnly)
         {
-            // DNXCORE50: The BindingFlags enum and all related reflection method overloads have been removed from DNXCORE50. Instead of trying to provide
+            // NETSTANDARD1_3: The BindingFlags enum and all related reflection method overloads have been removed from NETSTANDARD. Instead of trying to provide
             // a general purpose flags enum and methods that can take any combination of the flags, we provide more restrictive methods that
             // still allow for the same functionality as needed by the calling code.
 #if NETSTANDARD1_3
@@ -805,18 +805,7 @@ namespace Microsoft.OData.Edm
 #endif
 
 #if NETSTANDARD1_3
-        #region Extension Methods to replace missing functionality (used for DNXCORE50 only, methods with these signatures already exist on other platforms)
-        /// <summary>
-        /// Replacement for Type.IsAssignableFrom(Type)
-        /// </summary>
-        /// <param name="thisType">Type on which to call this helper method.</param>
-        /// <param name="otherType">Type to test for assignability.</param>
-        /// <returns>See documentation for method being accessed in the body of the method.</returns>
-        internal static bool IsAssignableFrom(this Type thisType, Type otherType)
-        {
-            return thisType.GetTypeInfo().IsAssignableFrom(otherType.GetTypeInfo());
-        }
-
+        #region Extension Methods to replace missing functionality (used for NETSTANDARD1_3 only, methods with these signatures already exist on other platforms)
         /// <summary>
         /// Replacement for Type.IsSubclassOf(Type).
         /// </summary>
@@ -1013,23 +1002,6 @@ namespace Microsoft.OData.Edm
         }
 
         /// <summary>
-        /// Replacement for Type.GetGenericArguments().
-        /// </summary>
-        /// <param name="type">Type on which to call this helper method.</param>
-        /// <returns>Array of Type objects that represent the type arguments of a generic type or the type parameters of a generic type definition.</returns>
-        internal static Type[] GetGenericArguments(this Type type)
-        {
-            if (type.GetTypeInfo().IsGenericTypeDefinition)
-            {
-                return type.GetTypeInfo().GenericTypeParameters;
-            }
-            else
-            {
-                return type.GenericTypeArguments;
-            }
-        }
-
-        /// <summary>
         /// Replacement for Type.GetInterfaces().
         /// </summary>
         /// <param name="type">Type on which to call this helper method.</param>
@@ -1202,19 +1174,3 @@ namespace Microsoft.OData.Edm
         }
     }
 }
-
-#if NETSTANDARD1_3
-namespace System.Diagnostics.CodeAnalysis
-{
-    [AttributeUsage(AttributeTargets.All, AllowMultiple = true)]
-    internal class SuppressMessageAttribute : Attribute
-    {
-        public SuppressMessageAttribute(string category, string checkId) { }
-
-        public string Justification { get; set; }
-        public string Scope { get; set; }
-        public string Target { get; set; }
-        public string MessageId { get; set; }
-    }
-}
-#endif

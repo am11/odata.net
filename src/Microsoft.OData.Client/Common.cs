@@ -15,6 +15,7 @@ namespace Microsoft.OData.Service
     using System.Diagnostics;
     using System.Dynamic;
     using System.Linq;
+    using System.Reflection;
     using System.Xml;
     using System.Text;
     using Microsoft.OData.Core;

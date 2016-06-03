@@ -11,6 +11,7 @@ namespace Microsoft.OData.Client
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
+    using System.Reflection;
     using Microsoft.OData.Core.Metadata;
     using Microsoft.OData.Client.Metadata;
     using Microsoft.OData.Edm;

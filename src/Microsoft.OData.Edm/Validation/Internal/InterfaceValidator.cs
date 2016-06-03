@@ -9,6 +9,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using Microsoft.OData.Edm.Annotations;
 using Microsoft.OData.Edm.Expressions;
 using Microsoft.OData.Edm.Values;

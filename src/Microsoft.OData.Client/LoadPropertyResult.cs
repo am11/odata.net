@@ -13,6 +13,7 @@ namespace Microsoft.OData.Client
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.IO;
+    using System.Reflection;
     using System.Text;
     using Microsoft.OData.Client.Metadata;
 

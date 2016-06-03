@@ -10,6 +10,7 @@ namespace Microsoft.OData.Core.UriParser.Parsers
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Globalization;
+    using System.Reflection;
     using System.Text;
     using System.Xml;
     using Edm.Library;

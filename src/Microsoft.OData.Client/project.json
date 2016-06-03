@@ -1,5 +1,5 @@
 {
-  "supports": { },
+  "version": "6.15.0-*",
 
   "buildOptions": {
     "define": [

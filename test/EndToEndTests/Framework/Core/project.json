@@ -1,5 +1,5 @@
 {
-  "supports": { },
+  "name": "Microsoft.Test.OData.Framework",
 
   "buildOptions": {
     "define": [
